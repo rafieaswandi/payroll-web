@@ -3,7 +3,7 @@
 
     <flux:modal.trigger name="main-modal">
         <flux:button icon="plus" variant="primary" type="button" class="w-fit">
-            {{ __('Register an Employee') }}
+            {{ __('Add new Employee') }}
         </flux:button>
     </flux:modal.trigger>
 
