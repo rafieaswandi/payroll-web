@@ -36,13 +36,14 @@ class EmployeeManagement extends Component
     public function mount()
     {
         $this->hireDate = now()->format('Y-m-d');
+        $this->positions = Position::latest()->get();
     }
     #[Title('Employee Management')]
     public function render()
     {
         return view('livewire.admin.employee-management', [
             'departments' => Department::latest()->get(),
-            // 'positions' => Position::latest()->get(),
+            //'positions' => Position::latest()->get(),
             'employees' => Employee::latest()->paginate(10)
         ]);
     }
