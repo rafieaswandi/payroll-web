@@ -22,34 +22,35 @@ class TimeAttendance extends Component
         $this->generateMonthLinks();
     }
     public function generateMonthLinks()
-    {
-        $monthsData = Attendance::select(
-            DB::raw("strftime('%Y', attendance_date) as year"),
-            DB::raw("CAST(strftime('%m', attendance_date) AS INTEGER) as month_number")
-        )        
-            ->distinct()
-            ->orderBy('year', 'desc')
-            ->orderBy('month_number', 'desc')
-            ->get();
+{
+    $monthsData = Attendance::select(
+        DB::raw("YEAR(attendance_date) as year"),
+        DB::raw("MONTH(attendance_date) as month_number")
+    )        
+        ->distinct()
+        ->orderBy('year', 'desc')
+        ->orderBy('month_number', 'desc')
+        ->get();
 
-        $this->monthLinks = []; // Reset before populating
-        foreach ($monthsData as $data) {
-            if ($data->year && $data->month_number) {
-                try {
-                    $date = Carbon::createFromDate($data->year, $data->month_number, 1);
-                    $this->monthLinks[] = [
-                        'value' => $date->format('Y-m'), // e.g., 2023-05
-                        'display' => $date->format('F Y'), // e.g., May 2023
-                    ];
-                } catch (\Exception $e) {
-                    $this->monthLinks[] = [
-                        'value' => null,
-                        'display' => 'Invalid Date',
-                    ];
-                }
+    $this->monthLinks = []; // Reset before populating
+    foreach ($monthsData as $data) {
+        if ($data->year && $data->month_number) {
+            try {
+                $date = Carbon::createFromDate($data->year, $data->month_number, 1);
+                $this->monthLinks[] = [
+                    'value' => $date->format('Y-m'), // e.g., 2023-05
+                    'display' => $date->format('F Y'), // e.g., May 2023
+                ];
+            } catch (\Exception $e) {
+                $this->monthLinks[] = [
+                    'value' => null,
+                    'display' => 'Invalid Date',
+                ];
             }
         }
     }
+}
+
     public function applyMonthFilter($yearMonth)
     {
         $this->selectedYearMonth = $yearMonth;
