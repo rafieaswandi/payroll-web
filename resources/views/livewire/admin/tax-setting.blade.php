@@ -70,10 +70,9 @@
                 </flux:heading>
                 <flux:text class="mt-2">
                     @if ($isEditting)
-                        Update tax to the system. This will allow you to manage your employee PPh tax more effectively.
+                       Update taxes into the system. This will allow you to better manage employee income tax.
                     @else
-                        Add a new tax to the system. This will allow you to manage your employee PPh tax more
-                        effectively.
+                        Add new taxes to the system. This will allow you to manage employee income tax more comprehensively and effectively.
                     @endif
                 </flux:text>
             </div>
@@ -106,7 +105,7 @@
                     ?
                 </flux:heading>
                 <flux:text class="mt-2">
-                    <p>You're about to delete this tax.</p>
+                    <p>Are you sure you want to delete this tax.</p>
                     <p>This action cannot be reversed.</p>
                 </flux:text>
             </div>

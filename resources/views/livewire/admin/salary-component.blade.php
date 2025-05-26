@@ -72,18 +72,18 @@
                     <flux:heading size="lg">@if ($isEditting) Edit @else New @endif Allowance</flux:heading>
                     <flux:text class="mt-2">
                         @if ($isEditting)
-                        Update allowance to the system. This will allow you to manage your allowances more effectively.
+                       Update the allowance into the system. This will allow you to manage the allowance better.
                         @else
-                        Add a new allowance to the system. This will allow you to manage your allowances more effectively.
+                        Add new allowances to the system. This will allow you to manage allowances better.
                         @endif
                     </flux:text>
                 @else
                     <flux:heading size="lg">@if ($isEditting) Edit @else New @endif Deduction</flux:heading>
                     <flux:text class="mt-2">
                         @if ($isEditting)
-                        Update deduction to the system. This will allow you to manage your deductions more effectively.
+                        Update the reductions in the system. This will allow you to manage the reductions more efficiently.
                         @else
-                        Add a new deduction to the system. This will allow you to manage your deductions more effectively.
+                        Add new pieces to the system. This will allow you to manage pieces more efficiently.
                         @endif
                     </flux:text>
                 @endif
@@ -123,7 +123,7 @@
                     ?
                 </flux:heading>
                 <flux:text class="mt-2">
-                    <p>You're about to delete this @if ($modalType == 'allowance') allowance @else deduction @endif.</p>
+                    <p>Are you sure you want to delete this? @if ($modalType == 'allowance') allowance @else deduction @endif.</p>
                     <p>This action cannot be reversed.</p>
                 </flux:text>
             </div>

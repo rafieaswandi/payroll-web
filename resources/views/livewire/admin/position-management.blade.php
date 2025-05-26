@@ -53,7 +53,7 @@
                 <flux:heading size="lg">@if($isEditting) Edit @else New @endif Position</flux:heading>
                 <flux:text class="mt-2">
                     @if ($isEditting)
-                    Update a position to the system.
+                    Update a new position to the system.
                     @else
                     Add a new position to the system.
                     @endif
@@ -84,7 +84,7 @@
                     ?
                 </flux:heading>
                 <flux:text class="mt-2">
-                    <p>You're about to delete this position.</p>
+                    <p>Are you sure you want to delete this position.</p>
                     <p>This action cannot be reversed.</p>
                 </flux:text>
             </div>
