@@ -14,8 +14,7 @@
             <div>
                 <flux:heading size="lg">New Department</flux:heading>
                 <flux:text class="mt-2">
-                    Add a new department to the system. This will allow you to manage your departments more
-                    effectively. nyoba2
+                    Add new departments to the system. This will make it easier for you to manage your departments better. 
                 </flux:text>
             </div>
             <flux:input wire:model="name" label="Name" placeholder="Department name" required />
@@ -74,7 +73,7 @@
                     ?
                 </flux:heading>
                 <flux:text class="mt-2">
-                    <p>You're about to delete this department.</p>
+                    <p>Are you sure you want to delete this department.</p>
                     <p>This action cannot be reversed.</p>
                 </flux:text>
             </div>
