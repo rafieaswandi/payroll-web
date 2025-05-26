@@ -15,7 +15,7 @@
                 <flux:heading size="lg">New Department</flux:heading>
                 <flux:text class="mt-2">
                     Add a new department to the system. This will allow you to manage your departments more
-                    effectively.
+                    effectively. nyoba2
                 </flux:text>
             </div>
             <flux:input wire:model="name" label="Name" placeholder="Department name" required />
